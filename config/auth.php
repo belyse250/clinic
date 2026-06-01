@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'restaurant' => [
+            'driver' => 'session',
+            'provider' => 'restaurant_users',
+        ],
     ],
 
     /*
@@ -63,6 +68,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+
+        'restaurant_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\RestaurantUser::class,
         ],
 
         // 'users' => [
